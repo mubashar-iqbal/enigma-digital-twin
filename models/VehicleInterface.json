@@ -1,0 +1,57 @@
+{
+    "@id": "dtmi:vehicle:smartvehicle;1",
+    "@type": "Interface",
+    "displayName": "Smart Vehicle Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Id",
+            "schema": "string",
+            "description": "Vehicle ID",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Model",
+            "schema": "string",
+            "description": "Vehicle Model",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Manufacturer",
+            "schema": "string",
+            "description": "Vehicle Manufacturer",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Year",
+            "schema": "string",
+            "description": "Vehicle Year",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:vehicle:rel_has_speedometer_sensor;1",
+            "name": "rel_has_speedometer_sensor",
+            "displayName": "Has speedometer sensor",
+            "target": "dtmi:vehicle:speedometer_sensor;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:vehicle:rel_has_indicators_sensor;1",
+            "name": "rel_has_indicators_sensor",
+            "displayName": "Has indicators sensor",
+            "target": "dtmi:vehicle:indicators_sensor;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:vehicle:rel_has_coolant_sensor;1",
+            "name": "rel_has_coolant_sensor",
+            "displayName": "Has coolant sensor",
+            "target": "dtmi:vehicle:coolant_sensor;1"
+        }
+    ]
+}

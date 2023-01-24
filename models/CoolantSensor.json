@@ -1,0 +1,29 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:vehicle:coolant_sensor;1",
+    "@type": "Interface",
+    "displayName": "Coolant Sensor Interface Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Id",
+            "schema": "string",
+            "description": "Coolant Sensor Id",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Reading",
+            "schema": "double",
+            "description": "Coolant Sensor Reading",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "SensorState",
+            "schema": "string",
+            "description": "Funcational and Non-Functional State of Coolant Sensor",
+            "writable": true
+        }
+    ]
+}

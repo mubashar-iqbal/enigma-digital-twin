@@ -1,0 +1,29 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:vehicle:speedometer_sensor;1",
+    "@type": "Interface",
+    "displayName": "Speedometer Sensor Interface Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Id",
+            "schema": "string",
+            "description": "Speedometer Sensor Id",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Reading",
+            "schema": "double",
+            "description": "Speedometer Sensor Reading",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "SensorState",
+            "schema": "string",
+            "description": "Funcational and Non-Functional State of Speedometer Sensor",
+            "writable": true
+        }
+    ]
+}

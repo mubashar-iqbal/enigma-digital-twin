@@ -1,0 +1,29 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:vehicle:indicators_sensor;1",
+    "@type": "Interface",
+    "displayName": "Indicators Sensor Interface Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Id",
+            "schema": "string",
+            "description": "Indicators Sensor Id",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Reading",
+            "schema": "double",
+            "description": "Indicators Sensor Reading",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "SensorState",
+            "schema": "string",
+            "description": "Funcational and Non-Functional State of Indicators Sensor",
+            "writable": true
+        }
+    ]
+}

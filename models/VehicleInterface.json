@@ -33,24 +33,87 @@
             "writable": true
         },
         {
+            "@type": "Property",
+            "name": "SpeedometerSensorLocation",
+            "description": "Speedometer Sensor Location",
+            "schema": {
+                "@id": "dtmi:vehicle:speedometer_sensor:location;1",
+                "@type": "Object",
+                "fields": [
+                    {
+                        "@id": "dtmi:vehicle:speedometer_sensor:location:lat;1",
+                        "name": "Latitude",
+                        "schema": "double"
+                    },
+                    {
+                        "@id": "dtmi:vehicle:speedometer_sensor:location:lon;1",
+                        "name": "Longitude",
+                        "schema": "double"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Property",
+            "name": "IndicatorSensorLocation",
+            "description": "Left and Right Indicator Sensor Location",
+            "schema": {
+                "@id": "dtmi:vehicle:indicator_sensor:location;1",
+                "@type": "Object",
+                "fields": [
+                    {
+                        "@id": "dtmi:vehicle:indicator_sensor:location:lat;1",
+                        "name": "Latitude",
+                        "schema": "double"
+                    },
+                    {
+                        "@id": "dtmi:vehicle:indicator_sensor:location:lon;1",
+                        "name": "Longitude",
+                        "schema": "double"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Property",
+            "name": "CoolantSensorLocation",
+            "description": "Coolant Sensor Location",
+            "schema": {
+                "@id": "dtmi:vehicle:coolant_sensor:location;1",
+                "@type": "Object",
+                "fields": [
+                    {
+                        "@id": "dtmi:vehicle:coolant_sensor:location:lat;1",
+                        "name": "Latitude",
+                        "schema": "double"
+                    },
+                    {
+                        "@id": "dtmi:vehicle:coolant_sensor:location:lon;1",
+                        "name": "Longitude",
+                        "schema": "double"
+                    }
+                ]
+            }
+        },
+        {
             "@type": "Relationship",
             "@id": "dtmi:vehicle:rel_has_speedometer_sensor;1",
             "name": "rel_has_speedometer_sensor",
-            "displayName": "Has speedometer sensor",
+            "displayName": "Vehicle has speedometer sensor",
             "target": "dtmi:vehicle:speedometer_sensor;1"
         },
         {
             "@type": "Relationship",
             "@id": "dtmi:vehicle:rel_has_indicators_sensor;1",
             "name": "rel_has_indicators_sensor",
-            "displayName": "Has indicators sensor",
+            "displayName": "Vehicle has indicators sensor",
             "target": "dtmi:vehicle:indicators_sensor;1"
         },
         {
             "@type": "Relationship",
             "@id": "dtmi:vehicle:rel_has_coolant_sensor;1",
             "name": "rel_has_coolant_sensor",
-            "displayName": "Has coolant sensor",
+            "displayName": "Vehicle has coolant sensor",
             "target": "dtmi:vehicle:coolant_sensor;1"
         }
     ]

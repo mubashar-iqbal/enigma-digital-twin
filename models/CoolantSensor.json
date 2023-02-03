@@ -13,16 +13,58 @@
         },
         {
             "@type": "Property",
-            "name": "Reading",
-            "schema": "double",
-            "description": "Coolant Sensor Reading",
+            "name": "SensorState",
+            "schema": "string",
+            "description": "Funcational and Non-Functional State of Coolant Sensor",
             "writable": true
         },
         {
             "@type": "Property",
-            "name": "SensorState",
-            "schema": "string",
-            "description": "Funcational and Non-Functional State of Coolant Sensor",
+            "name": "CanBusPayload",
+            "description": "Coolant Sensor Can Bus Payload",
+            "schema": {
+                "@id": "dtmi:vehicle:coolant_sensor:payload;1",
+                "@type": "Object",
+                "fields": [
+                    {
+                        "@id": "dtmi:vehicle:coolant_sensor:payload:timestamp;1",
+                        "name": "TS",
+                        "schema": "integer"
+                    },
+                    {
+                        "@id": "dtmi:vehicle:coolant_sensor:payload:id;1",
+                        "name": "ID_MF",
+                        "schema": "integer"
+                    }, 
+                    {
+                        "@id": "dtmi:vehicle:coolant_sensor:payload:bytes;1",
+                        "name": "CAN_PL_DATA_BYTES",
+                        "description": "CAN_PL_0 is the first byte, and CAN_PL_7 is the last byte of the payload from CAN bus",
+                        "schema": "string"
+                    },
+                    {
+                        "@id": "dtmi:vehicle:coolant_sensor:payload:timestamp_difference_mf;1",
+                        "name": "TD_TS_MF",
+                        "schema": "integer"
+                    },
+                    {
+                        "@id": "dtmi:vehicle:coolant_sensor:payload:timestamp_difference_id;1",
+                        "name": "TD_ID_MF",
+                        "schema": "integer"
+                    },
+                    {
+                        "@id": "dtmi:vehicle:coolant_sensor:payload:dlc;1",
+                        "name": "DLC",
+                        "schema": "integer"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Property",
+            "name": "Classification",
+            "schema": "boolean",
+            "description": "The classification tells about the request is Attack or Non-Attack",
             "writable": true
         }
     ]

@@ -1,59 +1,59 @@
 {
     "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:vehicle:speedometer_sensor;1",
+    "@id": "dtmi:vehicle:indicator_sensor;1",
     "@type": "Interface",
-    "displayName": "Speedometer Sensor Interface Model",
+    "displayName": "Right and Left Indicator Sensor Interface Model",
     "contents": [
         {
             "@type": "Property",
             "name": "Id",
             "schema": "string",
-            "description": "Speedometer Sensor Id",
+            "description": "Indicator Sensor Id",
             "writable": true
         },
         {
             "@type": "Property",
             "name": "SensorState",
             "schema": "string",
-            "description": "Funcational and Non-Functional State of Speedometer Sensor",
+            "description": "Funcational and Non-Functional State of Indicator Sensor",
             "writable": true
         },
         {
             "@type": "Property",
             "name": "CanBusPayload",
-            "description": "Speedometer Sensor Can Bus Payload",
+            "description": "Indicator Sensor Can Bus Payload",
             "schema": {
-                "@id": "dtmi:vehicle:speedometer_sensor:payload;1",
+                "@id": "dtmi:vehicle:indicator_sensor:payload;1",
                 "@type": "Object",
                 "fields": [
                     {
-                        "@id": "dtmi:vehicle:speedometer_sensor:payload:timestamp;1",
+                        "@id": "dtmi:vehicle:indicator_sensor:payload:timestamp;1",
                         "name": "TS",
                         "schema": "integer"
                     },
                     {
-                        "@id": "dtmi:vehicle:speedometer_sensor:payload:id;1",
+                        "@id": "dtmi:vehicle:indicator_sensor:payload:id;1",
                         "name": "ID_MF",
                         "schema": "integer"
                     }, 
                     {
-                        "@id": "dtmi:vehicle:speedometer_sensor:payload:bytes;1",
+                        "@id": "dtmi:vehicle:indicator_sensor:payload:bytes;1",
                         "name": "CAN_PL_DATA_BYTES",
                         "description": "CAN_PL_0 is the first byte, and CAN_PL_7 is the last byte of the payload from CAN bus",
                         "schema": "string"
                     },
                     {
-                        "@id": "dtmi:vehicle:speedometer_sensor:payload:timestamp_difference_mf;1",
+                        "@id": "dtmi:vehicle:indicator_sensor:payload:timestamp_difference_mf;1",
                         "name": "TD_TS_MF",
                         "schema": "integer"
                     },
                     {
-                        "@id": "dtmi:vehicle:speedometer_sensor:payload:timestamp_difference_id;1",
+                        "@id": "dtmi:vehicle:indicator_sensor:payload:timestamp_difference_id;1",
                         "name": "TD_ID_MF",
                         "schema": "integer"
                     },
                     {
-                        "@id": "dtmi:vehicle:speedometer_sensor:payload:dlc;1",
+                        "@id": "dtmi:vehicle:indicator_sensor:payload:dlc;1",
                         "name": "DLC",
                         "schema": "integer"
                     }

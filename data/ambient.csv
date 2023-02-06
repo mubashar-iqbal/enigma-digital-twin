@@ -1,0 +1,13 @@
+description,elapsed_sec,filename,name,on_dyno
+"basic drive activities (e.g., drive; accelerate; decelerate; reverse; ect.)",1250.943529,ambient/ambient_dyno_drive_basic_long.csv.zip,ambient_dyno_drive_basic_long,1.0
+"basic drive activities (e.g., drive; accelerate; decelerate; reverse; ect.)",444.75061,ambient/ambient_dyno_drive_basic_short.csv.zip,ambient_dyno_drive_basic_short,1.0
+"driving while trying to cause benign anomalies (e.g., unbuckle seatbelt/open door while driving, etc.); idle; accelerate/decelerate/coast. (Note: brief gap w no CAN data at ~150s)",456.455964,ambient/ambient_dyno_drive_benign_anomaly.csv.zip,ambient_dyno_drive_benign_anomaly,1.0
+"basic driving activities (e.g., reverse; drive; accel; brake; ect.) and more complex/one-off activities (e.g., key lock/unlock; door open/close; cruise control; infotainment/steering wheel button presses; turn signals; lights; ect.)",657.876345,ambient/ambient_dyno_drive_extended_long.csv.zip,ambient_dyno_drive_extended_long,1.0
+"basic driving activities (e.g., reverse; drive; accel; brake; ect.) and more complex/one-off activities (e.g., key lock/unlock; door open/close; cruise control; infotainment/steering wheel button presses; turn signals; lights; ect.)",359.809907,ambient/ambient_dyno_drive_extended_short.csv.zip,ambient_dyno_drive_extended_short,1.0
+playing with radio and infotainment unit while idling and driving,390.45563,ambient/ambient_dyno_drive_radio_infotainment.csv.zip,ambient_dyno_drive_radio_infotainment,1.0
+driving and accelerating in colder conditions (Note: this is the only ambient capture that was during a colder month),47.730522,ambient/ambient_dyno_drive_winter.csv.zip,ambient_dyno_drive_winter,1.0
+"trying to exercise full range of all signals (e.g., very fast acceleration/deceleration, push all buttons, etc.)",2172.804312,ambient/ambient_dyno_exercise_all_bits.csv.zip,ambient_dyno_exercise_all_bits,1.0
+playing with radio and infotainment unit during while idling,660.784025,ambient/ambient_dyno_idle_radio_infotainment.csv.zip,ambient_dyno_idle_radio_infotainment,1.0
+"basic reverse activities (e.g., in reverse: accelerate; decelerate; coast; ect.)",51.434144,ambient/ambient_dyno_reverse.csv.zip,ambient_dyno_reverse,1.0
+"drive in parking lots, city streets and highways. (Note: original capture had diagnostic queries/responses, but these were removed in obfuscation)",469.941703,ambient/ambient_highway_street_driving_diagnostics.csv.zip,ambient_highway_street_driving_diagnostics,0.0
+"drive in parking lots, city streets and highways.",3764.317591,ambient/ambient_highway_street_driving_long.csv.zip,ambient_highway_street_driving_long,0.0

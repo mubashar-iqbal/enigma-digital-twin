@@ -1,7 +1,7 @@
 {
-    "@id": "dtmi:vehicle:smartvehicle;1",
+    "@id": "dtmi:vehicle:interface;1",
     "@type": "Interface",
-    "displayName": "Smart Vehicle Interface Model",
+    "displayName": "Vehicle Interface Model",
     "@context": "dtmi:dtdl:context;2",
     "contents": [
         {
@@ -104,10 +104,10 @@
         },
         {
             "@type": "Relationship",
-            "@id": "dtmi:vehicle:rel_has_indicators_sensor;1",
-            "name": "rel_has_indicators_sensor",
-            "displayName": "Vehicle has indicators sensor",
-            "target": "dtmi:vehicle:indicators_sensor;1"
+            "@id": "dtmi:vehicle:rel_has_indicator_sensor;1",
+            "name": "rel_has_indicator_sensor",
+            "displayName": "Vehicle has indicator sensor",
+            "target": "dtmi:vehicle:indicator_sensor;1"
         },
         {
             "@type": "Relationship",

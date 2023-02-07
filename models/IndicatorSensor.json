@@ -2,7 +2,7 @@
     "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:vehicle:indicator_sensor;1",
     "@type": "Interface",
-    "displayName": "Right and Left Indicator Sensor Interface Model",
+    "displayName": "Indicator Sensor Interface Model",
     "contents": [
         {
             "@type": "Property",

@@ -60,7 +60,7 @@ namespace SpeedometerSensor
                 var telemetryDataPoint = new SpeedometerSensorTelemetry
                 {
                     id = deviceId,
-                    classification = "Attack",
+                    classifier = "Attack",
 
                     // CAN bus payload mapping
                     ts = ts_payload,

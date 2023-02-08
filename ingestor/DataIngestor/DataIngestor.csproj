@@ -3,6 +3,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AzureFunctionsVersion>v3</AzureFunctionsVersion>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Azure.DigitalTwins.Core" Version="1.2.2" />
     <PackageReference Include="Azure.Identity" Version="1.4.1" />

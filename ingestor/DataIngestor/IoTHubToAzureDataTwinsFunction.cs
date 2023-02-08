@@ -33,12 +33,14 @@ namespace DataIngestor
         [FunctionName("IoTHubToADTFunction")]
         public static async Task RunAsync([EventGridTrigger]EventGridEvent eventGridEvent, ILogger log)
         {
-            log.LogInformation(eventGridEvent.Data.ToString());
+            //log.LogInformation(eventGridEvent.Data.ToString());
 
             if (adtInstanceUrl == null) log.LogError("Application setting \"ADT_SERVICE_URL\" not set");
 
             try
             {
+                //log.LogInformation("testing");
+
                 // Authenticate with Digital Twins
                 var cred = new ManagedIdentityCredential("https://digitaltwins.azure.net");
                 var client = new DigitalTwinsClient(
@@ -55,17 +57,23 @@ namespace DataIngestor
                     JObject deviceMessage = (JObject)JsonConvert.DeserializeObject(eventGridEvent.Data.ToString());
                     
                     string deviceId = (string)deviceMessage["systemProperties"]["iothub-connection-device-id"];
-                    double reading = (double)deviceMessage["body"]["reading"];
-                    string sensorState = "Funcational";
-                  
-                    log.LogInformation($"Device: {deviceId} Speedometer Reading is: {reading}, Device state is: {sensorState}");
 
-                    // https://docs.microsoft.com/en-us/azure/digital-twins/how-to-manage-twin
+                    string classification = deviceMessage["body"]["classification"].ToString();
+                    //int ts = (int)deviceMessage["body"]["ts"];
+                    
+                    log.LogInformation("Hello " + classification);
+
+                    string sensorState = "Funcational"; // @TODO define mechanism to find sensor state
+                  
+                    log.LogInformation(
+                        $"Device: {deviceId}, Device state is: {sensorState}"
+                    );
                     
                     var updateTwinData = new JsonPatchDocument();
                     updateTwinData.AppendAdd("/Id", deviceId);
-                    updateTwinData.AppendAdd("/Reading", reading);
                     updateTwinData.AppendAdd("/SensorState", sensorState);
+                    updateTwinData.AppendAdd("/Classification", classification);
+                   // updateTwinData.AppendAdd("/TS", ts);
                     await client.UpdateDigitalTwinAsync(deviceId, updateTwinData).ConfigureAwait(false);
                 }
             }

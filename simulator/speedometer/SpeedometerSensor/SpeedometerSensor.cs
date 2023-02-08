@@ -9,6 +9,12 @@ namespace SpeedometerSensor
     public class SpeedometerSensorTelemetry
     {
         public string id { get; set; }
-        public double reading { get; set; }
+        public string classification { get; set; }
+        public int ts { get; set; }
+        public int id_mf { get; set; }
+        public int can_pl_data_bytes { get; set; }
+        public int td_ts_mf { get; set; }
+        public int td_id_mf { get; set; }
+        public int dlc { get; set; }
     }
 }

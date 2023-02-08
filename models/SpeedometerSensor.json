@@ -63,9 +63,11 @@
         {
             "@type": "Property",
             "name": "Classification",
-            "schema": "boolean",
+            "schema": "string",
             "description": "The classification tells about the request is Attack or Non-Attack",
             "writable": true
         }
     ]
 }
+
+

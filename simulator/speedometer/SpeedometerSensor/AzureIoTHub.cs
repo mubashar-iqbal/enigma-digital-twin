@@ -47,16 +47,28 @@ namespace SpeedometerSensor
         {
             var deviceClient = DeviceClient.CreateFromConnectionString(deviceConnectionString);
 
-            var rand = new Random();
+            // read data from SAD and ORNL data files
+            var ts_payload = 0;
+            var id_mf_payload = 0;
+            var can_pl_data_bytes_payload = 0;
+            var td_ts_mf_payload = 0;
+            var td_id_mf_payload = 0;
+            var dlc_payload = 0;
 
             while (!cancelToken.IsCancellationRequested)
             {
-                double speedometerReading = rand.NextDouble() * 260;
-
                 var telemetryDataPoint = new SpeedometerSensorTelemetry
                 {
                     id = deviceId,
-                    reading = speedometerReading
+                    classification = "Attack",
+
+                    // CAN bus payload mapping
+                    ts = ts_payload,
+                    id_mf = id_mf_payload,
+                    can_pl_data_bytes = can_pl_data_bytes_payload,
+                    td_ts_mf = td_ts_mf_payload,
+                    td_id_mf = td_id_mf_payload,
+                    dlc = dlc_payload
                 };
 
                 var messageString = JsonSerializer.Serialize(telemetryDataPoint);

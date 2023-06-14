@@ -24,3 +24,6 @@ We use this tool as it provides a graphical interface for examining and traversi
 To convert data into DTs readable format, we use JSON Patch Document. It allows us to make partial updates to an existing data ingestion JSON document without having to completely replace it, such as changing a single field, by providing the changes in the form of JSON operations. The operations specify the modifications to be made, for instance, adding, removing, or replacing fields, and they are applied to the target document in a precise order (e.g., updateTwinData.AppendAdd operation in our case). It also minimizes the amount of data carried over the network and avoids potential disputes that could come from updating the same document simultaneously.
 
 <img src="JSON_patch_document.png" width="600" alt="JSON patch document" title="JSON patch document"/>
+
+# How to Cite
+If you use ENIGMA simulation in your research, please consider citing our publication:  Sabah Suhail, Mubashar Iqbal, Rasheed Hussain, and Raja Jurdak. 2023. ENIGMA: An explainable digital twin security solution for cyber–physical systems. Computers in Industry 151 (2023), 103961. https://doi.org/10.1016/j.compind.2023.103961
